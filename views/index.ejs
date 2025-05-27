@@ -1,0 +1,13 @@
+<%- include("./partials/header.ejs") %>
+
+<%- include("./partials/form.ejs") %>
+
+    <% if (locals.posts && posts.length > 0) { %>
+    <% posts.forEach(post => { %>
+        <%- include("./partials/posts.ejs", {post: post}) %>
+    <% }) %>
+    <% } else { %> 
+        <h1>No posts yet.</h1>
+    <% } %>
+
+<%- include("./partials/footer.ejs") %>
